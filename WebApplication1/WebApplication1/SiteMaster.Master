@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMaster.master.cs" Inherits="WebApplication1.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <div class="topPanel">
+             <h1 style="margin-left: 320px">Header</h1>
+        </div>
+        <div class="rightPanel">
+             <h1>right<table class="auto-style1">
+                 <tr>
+                     <td>
+                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>
+                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Articles.aspx">Articles</asp:HyperLink>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>&nbsp;</td>
+                 </tr>
+                 </table>
+             </h1>
+        </div>
+         <div class="leftPanel">
+              <h1>left</h1>
+        </div>
+        <div class="centerPanel">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+         <div class="footer">
+        </div>
+    <h1 style="margin-left: 400px; margin-top: 352px">footer</h1>
+        </body>
+</html>
